@@ -4,4 +4,5 @@ jdk:
 
 
 after_success:
+  - echo "1111111111111111  ${COVERALLS_TOKEN}"
   - mvn clean test jacoco:report coveralls:report -DrepoToken="${COVERALLS_TOKEN}"
